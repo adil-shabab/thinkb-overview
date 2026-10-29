@@ -1,6 +1,6 @@
 // Network-first: you always get your latest data.js when online, cached copy when offline.
 // Bump CACHE when you add new files.
-const CACHE = 'tb-ops-v3';
+const CACHE = 'tb-ops-v4';
 const ASSETS = [
   './', 'index.html', 'dashboard.html', 'css/style.css',
   'js/config.js', 'js/auth.js', 'js/data.js', 'js/app.js', 'js/login.js',
