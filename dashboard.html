@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ThinkB Web Ops</title>
+  <meta name="theme-color" content="#0B0F1A">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Web Ops">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.write('<script src="js/config.js?v=' + Date.now() + '"><\/script>')</script>
+  <script src="js/auth.js"></script>
+  <script>Auth.requireAuth();</script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a href="#overview" class="brand">
+        <span class="brand-mark"><svg class="i" viewBox="0 0 24 24"><path d="M7 17V11M12 17V7M17 17v-3"/></svg></span>
+        <span>ThinkB Web Ops<small>WEB DEPARTMENT</small></span>
+      </a>
+      <nav class="nav" id="side-nav">
+        <a href="#overview" data-view="overview"><i data-icon="home"></i>Overview</a>
+        <a href="#websites" data-view="websites"><i data-icon="globe"></i>Websites<span class="count" data-count="sites"></span></a>
+        <a href="#tasks" data-view="tasks"><i data-icon="kanban"></i>Tasks<span class="count" data-count="tasks"></span></a>
+        <a href="#team" data-view="team"><i data-icon="users"></i>Team</a>
+        <a href="#renewals" data-view="renewals"><i data-icon="calendar"></i>Renewals<span class="count red" data-count="due"></span></a>
+      </nav>
+      <div class="side-foot">
+        <div class="side-profile">
+          <span class="avatar" style="--c:#7C5CFF" id="side-avatar"></span>
+          <div><b id="side-name"></b><small>Team Lead</small></div>
+        </div>
+        <button class="icon-btn" data-action="logout" title="Sign out"><i data-icon="logout"></i></button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <a href="#overview" class="brand brand-mobile">
+          <span class="brand-mark"><svg class="i" viewBox="0 0 24 24"><path d="M7 17V11M12 17V7M17 17v-3"/></svg></span>
+        </a>
+        <div class="topbar-title">
+          <small id="today-label"></small>
+          <b id="view-title">Overview</b>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn" id="bell" data-action="alerts" title="Payments due"><i data-icon="bell"></i><span class="dot" id="bell-dot" hidden></span></button>
+          <button class="icon-btn mobile-only" data-action="logout" title="Sign out"><i data-icon="logout"></i></button>
+        </div>
+      </header>
+
+      <main id="view" class="view"></main>
+    </div>
+  </div>
+
+  <nav class="bottom-nav" id="bottom-nav">
+    <a href="#overview" data-view="overview"><i data-icon="home"></i><span>Home</span></a>
+    <a href="#websites" data-view="websites"><i data-icon="globe"></i><span>Sites</span></a>
+    <a href="#tasks" data-view="tasks"><i data-icon="kanban"></i><span>Tasks</span></a>
+    <a href="#team" data-view="team"><i data-icon="users"></i><span>Team</span></a>
+    <a href="#renewals" data-view="renewals"><i data-icon="calendar"></i><span>Renewals</span><em class="nav-dot" data-count="due-dot" hidden></em></a>
+  </nav>
+
+  <!-- Website detail drawer -->
+  <div class="overlay" id="drawer-overlay" data-close="drawer"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-label="Website details"></aside>
+
+  <!-- Payments due popup -->
+  <div class="modal-wrap" id="alert-modal" aria-hidden="true">
+    <div class="overlay show" data-close="alerts"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="alert-title"></div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>document.write('<script src="js/data.js?v=' + Date.now() + '"><\/script>')</script>
+  <script src="js/app.js"></script>
+</body>
+</html>
