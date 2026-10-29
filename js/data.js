@@ -385,6 +385,8 @@ const DATA = {
       tasks: [
         { title: 'Create report option', assignee: 't1', priority: 'medium', due: '', status: 'doing' },
         { title: 'Create sprint option', assignee: 't1', priority: 'medium', due: '', status: 'doing' },
+        { title: 'Integrate sticky notification for pending works', assignee: 't1', priority: 'medium', due: '', status: 'todo' },
+        { title: 'Integrate client leads form', assignee: 't1', priority: 'medium', due: '', status: 'todo' },
       ],
       updates: [],
       notes: 'Runs on a ThinkB subdomain (renews with thinkb.agency). Frontend on ThinkB Hostinger; backend on ThinkB DigitalOcean.',
@@ -399,7 +401,9 @@ const DATA = {
         cost: 8, currency: '$', billing: { cycle: 'monthly', day: 15 }, card: 'My card (Adil)',
       },
       deploy: { method: 'FileZilla (FTP)', account: '' },
-      tasks: [],
+      tasks: [
+        { title: 'Changes in Home Care', assignee: 't1', priority: 'medium', due: '', status: 'todo' },
+      ],
       updates: [],
       notes: "Domain is with the client; we manage DNS in Cloudflare. Server is on VSH's DigitalOcean account, billed to Adil's card on the 15th of every month.",
     },
