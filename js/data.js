@@ -20,7 +20,7 @@
 const DATA = {
   team: [
     { id: 't1', name: 'Adil Shabab', role: 'Team Lead', color: '#7C5CFF',
-      current: { task: 'Creating report & sprint options', site: 'orbito' } },
+      current: null },
     { id: 't2', name: 'Nanda Reddy', role: 'Developer', color: '#22D3EE',
       current: { task: 'Searching templates for the website', site: 'pr-ventures' } },
     { id: 't3', name: 'Khaja', role: 'Developer', color: '#F472B6',
@@ -290,7 +290,7 @@ const DATA = {
       server: { managedBy: 'client' },
       deploy: { method: 'FileZilla (FTP)', account: 'FTP access from client' },
       tasks: [
-        { title: 'Deploy the changes', assignee: 't1', priority: 'medium', due: '', status: 'todo' },
+        { title: 'Deploy the changes', assignee: 't1', priority: 'medium', due: '', status: 'done' },
       ],
       updates: [],
       notes: 'Domain and server are with the client. We connect over FTP with FileZilla.',
@@ -383,10 +383,10 @@ const DATA = {
       },
       deploy: { method: 'Frontend on Hostinger', account: 'ThinkB Hostinger' },
       tasks: [
-        { title: 'Create report option', assignee: 't1', priority: 'medium', due: '', status: 'doing' },
-        { title: 'Create sprint option', assignee: 't1', priority: 'medium', due: '', status: 'doing' },
-        { title: 'Integrate sticky notification for pending works', assignee: 't1', priority: 'medium', due: '', status: 'todo' },
-        { title: 'Integrate client leads form', assignee: 't1', priority: 'medium', due: '', status: 'todo' },
+        { title: 'Create report option', assignee: 't1', priority: 'medium', due: '', status: 'done' },
+        { title: 'Create sprint option', assignee: 't1', priority: 'medium', due: '', status: 'done' },
+        { title: 'Integrate sticky notification for pending works', assignee: 't1', priority: 'medium', due: '', status: 'done' },
+        { title: 'Integrate client leads form', assignee: 't1', priority: 'medium', due: '', status: 'done' },
       ],
       updates: [],
       notes: 'Runs on a ThinkB subdomain (renews with thinkb.agency). Frontend on ThinkB Hostinger; backend on ThinkB DigitalOcean.',
@@ -402,7 +402,7 @@ const DATA = {
       },
       deploy: { method: 'FileZilla (FTP)', account: '' },
       tasks: [
-        { title: 'Changes in Home Care', assignee: 't1', priority: 'medium', due: '', status: 'todo' },
+        { title: 'Changes in Home Care', assignee: 't1', priority: 'medium', due: '', status: 'done' },
       ],
       updates: [],
       notes: "Domain is with the client; we manage DNS in Cloudflare. Server is on VSH's DigitalOcean account, billed to Adil's card on the 15th of every month.",
