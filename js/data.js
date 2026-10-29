@@ -390,6 +390,20 @@ const DATA = {
       notes: 'Runs on a ThinkB subdomain (renews with thinkb.agency). Frontend on ThinkB Hostinger; backend on ThinkB DigitalOcean.',
     },
     {
+      id: 'vsh-hospital', name: 'VSH Hospital', owner: 't1', url: '', status: 'live', progress: 100,
+      client: { name: 'VSH Hospital', contact: '' },
+      stack: [],
+      domains: [{ name: '', managedBy: 'client', dns: 'Cloudflare (managed by us)' }],
+      server: {
+        managedBy: 'thinkb', provider: 'DigitalOcean', account: 'VSH DigitalOcean', plan: 'Droplet',
+        cost: 8, currency: '$', billing: { cycle: 'monthly', day: 15 }, card: 'My card (Adil)',
+      },
+      deploy: { method: 'FileZilla (FTP)', account: '' },
+      tasks: [],
+      updates: [],
+      notes: "Domain is with the client; we manage DNS in Cloudflare. Server is on VSH's DigitalOcean account, billed to Adil's card on the 15th of every month.",
+    },
+    {
       id: 'vismaya', name: 'Vismaya Spaces', owner: 't2', url: 'https://vismayaspaces.com', status: 'live', progress: 100,
       client: { name: 'Vismaya Spaces', contact: '' },
       stack: [],
