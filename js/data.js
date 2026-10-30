@@ -24,7 +24,7 @@ const DATA = {
     { id: 't2', name: 'Nanda Reddy', role: 'Developer', color: '#22D3EE',
       current: { task: 'Searching templates for the website', site: 'pr-ventures' } },
     { id: 't3', name: 'Khaja', role: 'Developer', color: '#F472B6',
-      current: { task: 'Changing images on home, about & blog pages', site: 'eternavta' } },
+      current: null },
     // current: { task: 'What they are working on', site: 'website-id' }
   ],
 
@@ -207,12 +207,12 @@ const DATA = {
       id: 'sangameshwara', name: 'Sangameshwara Hospital', owner: 't3', url: 'https://sangameshwarhospital.com', status: 'live', progress: 100,
       client: { name: 'Sangameshwara Hospital', contact: '' },
       stack: [],
-      domains: [{ name: 'sangameshwarhospital.com' }],
-      server: {  },
+      domains: [{ name: 'sangameshwarhospital.com', registrar: 'Hostinger', account: 'Sangameshwara Hostinger', managedBy: 'thinkb', expiry: '2027-07-30', cost: '' }],
+      server: { managedBy: 'thinkb', provider: 'Hostinger', account: 'Sangameshwara Hostinger', plan: 'Single Web Hosting', expiry: '2027-08-29', cost: '' },
       deploy: { method: '', account: '' },
       tasks: [],
       updates: [],
-      notes: '',
+      notes: "Domain and server are in the client's own Hostinger account.",
     },
     {
       id: 'ruchir', name: 'Ruchir Hospital', owner: 't3', url: 'https://ruchirhospital.com', status: 'live', progress: 100,
@@ -261,9 +261,9 @@ const DATA = {
       },
       deploy: { method: 'FileZilla (FTP)', account: '' },
       tasks: [
-        { title: 'Change home page images', assignee: 't3', priority: 'medium', due: '', status: 'doing' },
-        { title: 'Change about page images', assignee: 't3', priority: 'medium', due: '', status: 'doing' },
-        { title: 'Change blog images', assignee: 't3', priority: 'medium', due: '', status: 'doing' },
+        { title: 'Change home page images', assignee: 't3', priority: 'medium', due: '', status: 'done' },
+        { title: 'Change about page images', assignee: 't3', priority: 'medium', due: '', status: 'done' },
+        { title: 'Change blog images', assignee: 't3', priority: 'medium', due: '', status: 'done' },
       ],
       updates: [],
       notes: "Domain is with the client; we manage DNS in Cloudflare. DigitalOcean server is billed to the client's card.",
